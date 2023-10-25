@@ -1,1 +1,21 @@
-<h1>Bienvenido in my first app</h1>
+<nav class="d-flex px-5 mt-3 flex-wrap">
+    <div class="col-md-6 col-lg-8 ">    
+        <img src="./assets/images/reservia.svg" alt="logo_du_site" >
+    </div>
+    <ul class="d-flex col-md-6 col-lg-4 p-3 align-items-center flex-wrap flex-no-wrap-md flex-no-wrap-lg">
+        <li 
+            class="mx-2 "
+            *ngFor="let item of itemsNav"
+            (click) ="setCurrention(item)" 
+            [class] = "action == item ? 'active': ''"
+        >
+        {{item.title}}
+    </li>
+        <!-- <li class="mx-2">Activités</li>
+        <li class="mx-2">Login</li>
+        <li class="mx-2">Logout</li> -->
+    </ul> 
+</nav>
+<h1 class="px-5 mt-3">Trouvez votre hébergement pour des vacances de rêve</h1>
+
+<app-hebergement></app-hebergement>

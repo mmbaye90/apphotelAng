@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'appHotelAng';
+
+  public currentAction :any;
+  
+  public itemsNav :Array<any> = [
+    {title:"Hebergement",route:"",icon :""},
+    {title:"Activités",route:"",icon :""},
+    {title:"Login",route:"",icon :""},
+    {title:"Logout",route:"",icon :""}
+  ]
+
+  action :any
+  setCurrention(item:any){
+    this.action = item
+  }
 }

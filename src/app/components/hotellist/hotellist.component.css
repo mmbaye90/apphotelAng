@@ -1,0 +1,243 @@
+.partie-centrale {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#Hebergement {
+    background: #f2f2f2;
+    border-radius: 1.5rem;
+    margin-right: 3rem;
+}
+
+#Hebergement h2 {
+    margin-top: 1.7rem;
+    margin-left: 3rem;
+}
+
+.galerie-hebergement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galerie-hebergement .item-galerie {
+    display: block;
+    width: 28%;
+    height: 13.75rem;
+    background-color: white;
+    margin: 1rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 1.25rem #0000002e;
+    padding: 0.30rem;
+    text-decoration: none;
+    color: black;
+}
+
+.galerie-hebergement .item-galerie img {
+    width: 100%;
+    height: 55%;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    object-fit: cover;
+}
+
+.galerie-hebergement .item-galerie .texte-sous-la-photo-galerie {
+    margin-left: 0.5rem;
+    margin-top: -0.5rem;
+}
+
+.galerie-hebergement .item-galerie .texte-sous-la-photo-galerie p {
+    margin-top: -0.8rem;
+    color: gray;
+}
+
+.galerie-hebergement .item-galerie .texte-sous-la-photo-galerie h3 {
+    margin-top: 0.8rem
+}
+
+.galerie-hebergement .item-galerie .texte-sous-la-photo-galerie .etoile {
+    margin-top: 1rem;
+    color: #0065FC;
+}
+
+.galerie-hebergement .item-galerie .texte-sous-la-photo-galerie .etoile i.filled {
+    color: #F2F2F2;
+}
+
+#Hebergement .voirplus {
+    line-height: 3rem;
+    margin-left: 3rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+aside {
+    background: #f2f2f2;
+    border-radius: 1.5rem;
+}
+
+aside h2 {
+    display: inline-block;
+    width: 80%;
+    margin-left: 1.87rem;
+}
+
+.bloc-galerie-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.bloc-galerie-aside .item-aside {
+    display: flex;
+    margin: 1rem;
+    background-color: white;
+    width: 20rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 1.25rem #0000002e;
+    height: 9rem;
+    padding: 0.20rem;
+    text-decoration: none;
+}
+
+.bloc-galerie-aside .item-aside img {
+    display: block;
+    width: 35%;
+    height: 8.6rem;
+    object-fit: cover;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+}
+
+
+/*Pour se conformer à l'espacement du rendu final*/
+
+.bloc-galerie-aside .texte-sous-la-photo-aside {
+    margin-left: 1rem;
+}
+
+.bloc-galerie-aside .texte-sous-la-photo-aside h3 {
+    color: black;
+}
+
+.bloc-galerie-aside .texte-sous-la-photo-aside p {
+    color: gray;
+    margin-top: -0.5rem;
+}
+
+.bloc-galerie-aside .texte-sous-la-photo-aside i {
+    color: #0065FC;
+    margin-top: 1rem;
+}
+
+.bloc-galerie-aside .texte-sous-la-photo-aside i.filled {
+    color: #F2F2F2;
+}
+
+
+/***********partie Activités**********/
+
+#activites h2 {
+    margin-top: 4rem;
+}
+
+#activites a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#activites p {
+    padding-left: 1rem;
+    margin-top: 0.7rem;
+}
+
+#activites .galerie-activite {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+#activites .galerie-activite .item-galerie-activite-photo-unique {
+    border-radius: 20px;
+    width: 19.063rem;
+    height: 27.5rem;
+    box-shadow: 0 0 1rem #0000002e;
+}
+
+#activites .galerie-activite .item-galerie-activite-photo-unique img {
+    width: 100%;
+    object-fit: cover;
+    height: 24.5rem;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+}
+
+#activites .galerie-activite .item-parent-galerie-activite-photo-double {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    width: 19.063rem;
+    height: 27.5rem;
+    justify-content: space-between;
+}
+
+#activites .galerie-activite .item-parent-galerie-activite-photo-double .fort-de-pomegue {
+    border-radius: 1.25rem;
+    height: 14.36rem;
+    box-shadow: 0 0 1rem #0000002e;
+}
+
+#activites .galerie-activite .item-parent-galerie-activite-photo-double .fort-de-pomegue img {
+    object-fit: cover;
+    width: 100%;
+    height: 11.25rem;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+}
+
+#activites .galerie-activite .item-parent-galerie-activite-photo-double .ile-du-friout {
+    border-radius: 20px;
+    height: 10.63rem;
+    box-shadow: 0 0 20px #0000002e;
+}
+
+#activites .galerie-activite .item-parent-galerie-activite-photo-double .ile-du-friout img {
+    object-fit: cover;
+    width: 100%;
+    height: 7.75rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#activites .galerie-activite .item-parent-galerie-activite-photo-double .Notre-dame {
+    border-radius: 1.25rem;
+    height: 11.25rem;
+    box-shadow: 0 0 1.25rem #0000002e;
+}
+
+#activites .galerie-activite .item-parent-galerie-activite-photo-double .Notre-dame img {
+    object-fit: cover;
+    width: 100%;
+    height: 8.44rem;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+}
+
+#activites .galerie-activite .item-parent-galerie-activite-photo-double .Parc {
+    border-radius: 1.25rem;
+    height: 13.75rem;
+    box-shadow: 0 0 1.25rem #0000002e;
+}
+
+#activites .galerie-activite .item-parent-galerie-activite-photo-double .Parc img {
+    object-fit: cover;
+    width: 100%;
+    height: 10.88rem;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+}

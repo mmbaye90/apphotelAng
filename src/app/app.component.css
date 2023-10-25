@@ -1,0 +1,12 @@
+ul li{
+    list-style-type: none;
+}
+ul li:hover{
+    border-top: 3px solid  #0065fc;
+    cursor: pointer;
+}
+.active{
+    border-top: 3px solid  #0065fc;
+    border-bottom: 3px solid  #0065fc;
+}
+
