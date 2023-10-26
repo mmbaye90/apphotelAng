@@ -6,7 +6,11 @@ import { AppComponent } from './app.component';
 import { HebergementComponent } from './components/hebergement/hebergement.component';
 import { ActivitesComponent } from './components/activites/activites.component';
 import { LoginComponent } from './components/login/login.component';
-import { HotellistComponent } from './components/hotellist/hotellist.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { DbService } from './api/db.service';
+import { LogoutComponent } from './components/logout/logout.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,15 @@ import { HotellistComponent } from './components/hotellist/hotellist.component';
     HebergementComponent,
     ActivitesComponent,
     LoginComponent,
-    HotellistComponent
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(DbService,{delay :300}),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,10 +10,10 @@ export class AppComponent {
   public currentAction :any;
   
   public itemsNav :Array<any> = [
-    {title:"Hebergement",route:"",icon :""},
-    {title:"Activités",route:"",icon :""},
-    {title:"Login",route:"",icon :""},
-    {title:"Logout",route:"",icon :""}
+    {title:"Hebergement",route:"/hebergement",icon :""},
+    {title:"Activités",route:"/activites",icon :""},
+    {title:"Login",route:"/login",icon :""},
+    {title:"Logout",route:"/logout",icon :""}
   ]
 
   action :any

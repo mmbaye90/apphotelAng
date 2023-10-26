@@ -1,35 +1,27 @@
 <main class="principale px-5 mt-3">
     <p class="phrase-accroche">En plein centre-ville ou en pleine nature</p>
     <form class="zone-recherche">
-        <span class="map"><i class="bi bi-geo-alt-fill"></i></span>
-        <input type="text" name="recherche" placeholder="Marseille, France">
-        <button type="submit"><i class="bi bi-search"></i>Rechercher</button>
+        <span class="map"><i class="bi bi-search"></i></span>
+        <input type="text"  placeholder="Marseille, France"
+               name="search" [(ngModel)] = "search"
+        >
+        <button type="submit" (click)="searchHotel(search)">Rechercher</button>
     </form>
     <div class="conteneur-filtres">
         <p class="titre-filtre">Filtres</p>
-        <div class="md-d-flex">
+        <div class="d-flex">
             <div class="item-filtre"
+                 style="cursor: pointer;"
                  *ngFor="let item of itemsFilter"
                  (click) = "setCurrentAction(item)"
                  [class] = "item==currentAction ? 'active' : ''"
+                 
             >
 
 
                 <p class="icone"><i class="bi {{item.icon}}"></i></p>
-                <a href="#">{{item.title}}</a>
+                <a (click) = "filteredHotel(item.title)">{{item.title}}</a>
             </div>
-            <!-- <div class="item-filtre">
-                <p class="icone"><i class="bi bi-person-arms-up"></i></p>
-                <a href="#">Familial</a>
-            </div>
-            <div class="item-filtre">
-                <p class="icone"><i class="bi bi-heart-fill"></i></p>
-                <p class="texte"><a href="#">Romantique</a></p>
-            </div>
-            <div class="item-filtre">
-                <p class="icone"><i class="bi bi-android"></i></p>
-                <a href="#">Animaux Autorisés</a>
-            </div> -->
         </div>
     </div>
     <div class="logo-info-texte">
@@ -39,4 +31,65 @@
 
 </main>
 
-<app-hotellist></app-hotellist>
+<div class="partie-centrale">
+
+    <section id="Hebergement">
+        <h2>Hébergement à Marseille</h2>
+        <div *ngIf="spiner " style="width: 100%;"
+            class="d-flex text-primary 
+                   justify-content-center
+                   align-items-center
+                   mt-3
+                   ">
+            <div class="spinner-border" role="status"></div>
+        </div>
+
+        <div class="galerie-hebergement">
+            <div class="item-galerie" href="#"
+                 *ngFor="let hotel of exp"
+            >
+            
+                <img [src]="hotel.imageUrl" alt="photo-Hôtel-Cannebière">
+                <div class="texte-sous-la-photo-galerie">
+                    <h3 class="cannebierre">{{hotel.hotelName}}</h3>
+                    <p class="desc mt-1">{{hotel.description}} <strong>{{hotel.price}}</strong></p>
+                    <p class="etoile">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <a class="voirplus" style="cursor: pointer;" (click)="afficherPlus()">{{voirPlusMoins ? "voir moins" :"voir plus"}}</a>
+    </section>
+
+    <aside>
+        <h2>Les plus populaires</h2><i class="fas fa-chart-line"></i>
+        <div class="bloc-galerie-aside">
+
+            <div class="item-aside" href="#"
+                *ngFor="let pop of populaire"
+                >
+                <img [src]="pop.imageUrl" alt="photo-hôtel-Hôtel-le-soleil-du-matin">
+                <div class="texte-sous-la-photo-aside">
+                    <h3>{{pop.hotelName}}</h3>
+                    <p>{{pop.description}} <strong>{{pop.price}}</strong></p>
+                    <p class="icone-etoile"><i class="fas fa-star"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </aside>
+
+</div> -->

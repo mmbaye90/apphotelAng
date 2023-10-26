@@ -8,14 +8,13 @@
             *ngFor="let item of itemsNav"
             (click) ="setCurrention(item)" 
             [class] = "action == item ? 'active': ''"
+            [routerLink]="item.route"
         >
         {{item.title}}
     </li>
-        <!-- <li class="mx-2">Activités</li>
-        <li class="mx-2">Login</li>
-        <li class="mx-2">Logout</li> -->
     </ul> 
 </nav>
 <h1 class="px-5 mt-3">Trouvez votre hébergement pour des vacances de rêve</h1>
 
-<app-hebergement></app-hebergement>
+<router-outlet>
+</router-outlet>
