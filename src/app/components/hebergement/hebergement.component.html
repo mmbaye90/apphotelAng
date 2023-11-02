@@ -47,24 +47,38 @@
         <div class="galerie-hebergement">
             <div class="item-galerie" href="#"
                  *ngFor="let hotel of exp"
+                 (click) ="goToHotelDetail(hotel.id)"
             >
             
                 <img [src]="hotel.imageUrl" alt="photo-Hôtel-Cannebière">
                 <div class="texte-sous-la-photo-galerie">
                     <h3 class="cannebierre">{{hotel.hotelName}}</h3>
                     <p class="desc mt-1">{{hotel.description}} <strong>{{hotel.price}}</strong></p>
-                    <p class="etoile">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </p>
+                        <p 
+                            class="etoile"
+                           [style.width.px]="satrRating(hotel.rating)"
+                        >
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </p>
                 </div>
             </div>
 
         </div>
-        <a class="voirplus" style="cursor: pointer;" (click)="afficherPlus()">{{voirPlusMoins ? "voir moins" :"voir plus"}}</a>
+        <div class="d-flex justify-content-between">
+            <a class="voirplus" style="cursor: pointer;" (click)="afficherPlus()">{{voirPlusMoins ? "voir moins" :"voir plus"}}</a>
+            <button 
+                class="btn btn-primary me-md-2" 
+                type="button"
+                title="Ajout hotel"
+                routerLink="/addhotel"
+            >
+                <i class="bi bi-plus-circle-dotted plus"></i>
+            </button>
+        </div>
     </section>
 
     <aside>
@@ -92,4 +106,5 @@
         </div>
     </aside>
 
-</div> -->
+</div>
+    

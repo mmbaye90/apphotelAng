@@ -11,6 +11,9 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DbService } from './api/db.service';
 import { LogoutComponent } from './components/logout/logout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetailhotelComponent } from './components/detailhotel/detailhotel.component';
+import { AddhotelComponent } from './components/addhotel/addhotel.component';
+import { StarratingComponent } from './components/starrating/starrating.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ActivitesComponent,
     LoginComponent,
     LogoutComponent,
+    DetailhotelComponent,
+    AddhotelComponent,
+    StarratingComponent,
   ],
   imports: [
     BrowserModule,

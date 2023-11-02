@@ -1,0 +1,55 @@
+<div class="container">
+    <h3 class="bg-primary text-white text-center">Ajouter un Hotel</h3>
+    <form [formGroup]="data" (ngSubmit)="onSubmit()">
+        <div class="row">
+        <div class="col">
+            <input 
+                type="text" 
+                class="form-control" 
+                placeholder="HotelName"
+                [formControl]="data.controls.hotelName"
+            >
+        </div>
+        <div class="col">
+            <input 
+                type="text" 
+                class="form-control" 
+                placeholder="price"
+                [formControl]="data.controls.price"
+            >
+        </div>
+        <div class="col">
+            <input 
+                type="text" 
+                class="form-control" 
+                placeholder="rating"
+                [formControl]="data.controls.rating"
+            >
+        </div>
+        <div class="col">
+            <input 
+                type="url" 
+                class="form-control" 
+                [formControl]="data.controls.imageUrl"
+            >
+        </div>
+            <textarea 
+                type="text" 
+                class="form-control" 
+                placeholder="Description"
+                [formControl]="data.controls.description"
+            ></textarea>
+        </div>
+    </form>
+    <div>
+        <button 
+            type="submit" 
+            class="btn btn-success mx-1 mt-3"
+            (click)="onSubmit()"
+        >Sauvgarder</button>
+        <button type="submit" class="btn btn-warning mx-1 mt-3">Reset</button>
+        <button type="submit" class="btn btn-danger mx-1 mt-3">Supprimer</button>    
+    </div>
+    <!-- <div> <strong>{{data.value}}</strong></div> -->
+</div>
+

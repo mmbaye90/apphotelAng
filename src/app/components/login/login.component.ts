@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  username!:string ;
+  email!:string|number;
+
+  login(loginForm:NgForm){
+    console.log(loginForm.form.value);
+    
+  }
 }

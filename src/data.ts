@@ -78,7 +78,7 @@ export const hotels:IHotels[]= [
 
 //************************** DATA Pour les activités  *********************
 
-export const ACTIVITES :IHotels[] = [
+export const activites :IHotels[] = [
     {
         id: 1,
         hotelName: "Vieux port",

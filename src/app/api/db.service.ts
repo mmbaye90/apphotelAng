@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from "angular-in-memory-web-api";
-import { hotels } from 'src/data';
+import { activites, hotels } from 'src/data';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,6 @@ import { hotels } from 'src/data';
 export class DbService implements InMemoryDbService{
 
   createDb(){
-    return {hotels}
+    return {hotels,activites}
   }
 }

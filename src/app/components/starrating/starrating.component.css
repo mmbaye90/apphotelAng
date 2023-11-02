@@ -1,0 +1,12 @@
+.containerRating{
+    width: 125px;
+}
+.etoile {
+    margin-top: -0.6rem;
+    overflow: hidden;
+    color: #0065FC;
+
+}
+.etoile i{
+    width: 25px;
+}

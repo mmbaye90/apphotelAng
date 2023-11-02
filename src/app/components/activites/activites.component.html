@@ -1,1 +1,57 @@
-<p>activites works!</p>
+        <section id="activites">
+            <h2>Activités à Marseille</h2>
+            <div class="galerie-activite">
+                <div class="item-galerie-activite-photo-unique vieuxport"
+                    *ngFor="let oneImg of one"
+                >
+                    <a href="#">
+                        <img [src]="oneImg.imageUrl" alt="photo-du-port-du-Marseille">
+                        <p>{{oneImg.hotelName}}</p>
+                    </a>
+                </div>
+                <div class="item-parent-galerie-activite-photo-double">
+                    <div class="fort-de-pomegue"
+                        *ngFor="let twoimg of two"
+                    >
+                        <a href="#">
+                            <img [src]="twoimg.imageUrl"  alt="photo-du-fort-de-Pomègues" class="fortpomegue">
+                            <p>{{twoimg.hotelName}}</p>
+                        </a>
+                    </div>
+                    <div class="ile-du-friout"
+                    *ngFor="let treeoimg of tree">
+                        <a href="#">
+                            <img [src]="treeoimg.imageUrl" alt="photo-île-du-friout" class="ile">
+                            <p>{{treeoimg.hotelName}}</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-galerie-activite-photo-unique parcnational"
+                *ngFor="let fourimg of four"
+                >
+                    <a href="#">
+                        <img [src]="fourimg.imageUrl" alt="photo-falaise">
+                        <p>{{fourimg.hotelName}}</p>
+                    </a>
+                </div>
+                <div class="item-parent-galerie-activite-photo-double">
+                    <div class="Notre-dame"
+                    *ngFor="let fiveimg of five"
+                    >
+                        <a href="#">
+                            <img [src]="fiveimg.imageUrl" alt="photo-Notre-Dame-de-la-Garde" class="notre-dame-garde">
+                            <p>{{fiveimg.hotelName}}</p>
+                        </a>
+                    </div>
+                    <div class="Parc"
+                    *ngFor="let siximg of six"
+                    >
+                        <a href="#">
+                            <img [src]="siximg.imageUrl" alt="photo-Parc Longchamp" class="parc-longchamp">
+                            <p>{{siximg.hotelName}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+

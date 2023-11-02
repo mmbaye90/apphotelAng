@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IHotels } from 'src/app/models/hotels';
 import { HotelService } from 'src/app/services/hotel.service';
 
@@ -24,7 +25,10 @@ export class HebergementComponent implements OnInit{
   }
 
   //********************************** controlers affichage  **************
-  constructor(private serviceHotel :HotelService){}
+  constructor(
+    private serviceHotel :HotelService,
+    private router :Router
+    ){}
 
   hotels :IHotels[]= []
   msgErr=''
@@ -64,12 +68,18 @@ export class HebergementComponent implements OnInit{
   }
 
   filteredHotel(str:string):IHotels[]{
-    console.log(str.toLowerCase());
     const resp = this.hotels.filter(el=>el.description.toLowerCase().indexOf(str.toLowerCase())!=-1)
     console.log(resp);
     
     return this.exp=resp
+  }
 
+  goToHotelDetail(hotelId :number){
+     this.router.navigate([`hotels`,hotelId])
+  }
+
+  satrRating(nb:number){
+   return  nb*80/5
   }
 
 }
